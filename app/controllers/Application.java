@@ -4,6 +4,7 @@ import play.*;
 import play.mvc.*;
 
 import views.html.*;
+import models.*;
 
 public class Application extends Controller {
 
@@ -15,7 +16,7 @@ public class Application extends Controller {
         return ok(show.render("This is sparta! (and my application also)", "(BTE) Best Title Ever"));	
     }
     public static Result display() {
-        return ok(show.render("This is the display page!(almost same as show but different)", "(BDTE) Best Display Title Ever"));	
+        return ok(display.render(Item.page()));	
     }
 
    /* public	static Result hello(String name)	{	
